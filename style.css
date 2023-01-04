@@ -34,6 +34,8 @@ body {
 #password {
   outline: none;
   width: 100%;
+  background-color: #fff;
+  color: #000;
 }
 
 .section-container {
