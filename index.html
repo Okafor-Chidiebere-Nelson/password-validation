@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Validation</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="main-container">
+      <div class="main-content-container">
+        <h1 class="main-heading">Password Validation</h1>
+      </div>
+      <form action="#">
+        <div class="form-username-container">
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username" />
+        </div>
+
+        <div class="form-password-container">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder=""
+            pattern="(?=.*\d)(?=.*[a-z])([A-Z]).{8,}"
+            required
+          />
+          <input type="checkbox" name="checkbox" id="checkbox" />show password
+        </div>
+        <!-- pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d].{8,}$"  -->
+        <input type="submit" value="SUBMIT" id="submit-button" required />
+      </form>
+    </main>
+
+    <section class="section-container">
+      <h1 class="section-heading">Password should contain the following:</h1>
+
+      <p class="small-letter-paragraph invalid" id="small-letter-span">
+        <span class="small-letter-span"></span> A small letter
+      </p>
+      <p class="capital-letter-paragraph invalid" id="capital-letter">
+        <span class="capital-letter-span"></span> A capital letter
+      </p>
+      <p class="number-paragraph invalid" id="number">
+        <span class="number-span"></span> A number
+      </p>
+      <p class="8-digits-paragraph invalid" id="digit-length">
+        <span class="8-digits-span"></span>8-digits
+      </p>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
